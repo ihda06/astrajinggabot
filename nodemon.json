@@ -1,0 +1,16 @@
+{
+    "watch": [
+        "src"
+    ],
+    "ext": "js,json",
+    "execMap": {
+        "js": "node --experimental-modules"
+    },
+    "env": {
+        "NODE_ENV": "development",
+        "PORT": 3000
+    },
+    "ignore": [
+        "**/*.test.js"
+    ]
+}

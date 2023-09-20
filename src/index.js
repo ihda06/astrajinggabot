@@ -2,8 +2,10 @@ const { default: Telegraf } = require("telegraf");
 const { logsRequest } = require("./middleware/logs");
 const session = require("telegraf/session");
 const { stage } = require("./stages");
+require('dotenv').config();
 
-const bot = new Telegraf("6668106925:AAElmxTx23D37NXr_Ue4NDtvhrTNw64FBKg");
+const bot = new Telegraf(process.env.API_TOKEN)
+// console.log(process.env.API_TOKEN);
 
 bot.use(logsRequest);
 bot.use(session());
