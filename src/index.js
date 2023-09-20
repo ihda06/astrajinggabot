@@ -5,7 +5,7 @@ const { stage } = require("./stages");
 require('dotenv').config();
 
 const bot = new Telegraf(process.env.API_TOKEN)
-// console.log(process.env.API_TOKEN);
+console.log("check api token", process.env.API_TOKEN);
 
 bot.use(logsRequest);
 bot.use(session());
